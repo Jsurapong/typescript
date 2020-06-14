@@ -1,7 +1,4 @@
 interface Reportable {
-  name: string;
-  year: Date;
-  borken: boolean;
   summary(): string;
 }
 
@@ -10,7 +7,16 @@ const oldCivic = {
   year: new Date(),
   borken: true,
   summary(): string {
-    return `${this.name}`;
+    return `Name: ${this.name}`;
+  },
+};
+
+const drink = {
+  color: "brown",
+  carbonated: true,
+  sugar: 40,
+  summary(): string {
+    return `My drink has ${this.sugar} grams of sugar`;
   },
 };
 
@@ -19,3 +25,4 @@ const printSummary = (item: Reportable): void => {
 };
 
 printSummary(oldCivic);
+printSummary(drink);
