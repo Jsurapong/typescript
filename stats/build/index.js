@@ -11,12 +11,15 @@ var matches = fs_1.default
     .split("\n")
     .map(function (row) { return row.split(","); });
 var manUnitedWins = 0;
+var homeWin = "H";
+var awayWin = "A";
+var draw = "D";
 for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
     var match = matches_1[_i];
-    if (match[1] === "Man United" && match[5] === "H") {
+    if (match[1] === "Man United" && match[5] === homeWin) {
         manUnitedWins++;
     }
-    if (match[2] === "Man United" && match[5] === "A") {
+    if (match[2] === "Man United" && match[5] === awayWin) {
         manUnitedWins++;
     }
 }
